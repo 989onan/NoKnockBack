@@ -1,6 +1,6 @@
 # NoKnockBack
 
-A [ResoniteModLoader](https://github.com/resonite-modding-group/ResoniteModLoader) mod for [Resonite](https://resonite.com/) A Resonite mod that prevents knockback and sends an impulse of "knockbackcanceled" to the client's user root.
+A [ResoniteModLoader](https://github.com/resonite-modding-group/ResoniteModLoader) mod for [Resonite](https://resonite.com/) A Resonite mod that prevents knockback and sends an impulse of "knockbackcanceled" for knockback and "gravitychangecanceled" for gravity changes to the client's user root.
 
 
 ## Installation
