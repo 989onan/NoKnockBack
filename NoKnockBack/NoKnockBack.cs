@@ -28,7 +28,7 @@ namespace NoKnockBack
         public override string Author => "989onan";
         public override string Link => "https://github.com/989onan/NoKnockBack";
         public override string Name => "NoKnockBack";
-        public override string Version => "1.1.0";
+        public override string Version => "1.2.0";
 
         public override void OnEngineInit()
         {
