@@ -283,17 +283,23 @@ namespace NoKnockBack
             [HarmonyPatch(typeof(SetCharacterGravity), "Do", typeof(FrooxEngineContext))]
             private static bool knockbackPatch5(ref bool __result, SetCharacterGravity __instance, FrooxEngineContext context)
             {
-
-                if (!Config.GetValue(allowGravityChange) && __instance.Character.Evaluate(context).IsUnderLocalUser)
+                if (context != null)
                 {
+                    if (__instance.Character.Evaluate(context) != null)
+                    {
+                        if (!Config.GetValue(allowGravityChange) && __instance.Character.Evaluate(context).IsUnderLocalUser)
+                        {
 
-                    DynamicImpulseHelper.Singleton.TriggerDynamicImpulse(context.LocalUser.GetBodyNodeSlot(BodyNode.Root), "gravitychangecanceled", true, context);
-                    DynamicImpulseHelper.Singleton.TriggerDynamicImpulseWithArgument<float3>(context.LocalUser.GetBodyNodeSlot(BodyNode.Root), "gravitychangecanceled", true, __instance.Gravity.Evaluate(context), context);
-                    __result = __instance.Character.Evaluate(context) != null;
-                    Msg("prevented gravity change");
-                    return false;
+                            DynamicImpulseHelper.Singleton.TriggerDynamicImpulse(context.LocalUser.GetBodyNodeSlot(BodyNode.Root), "gravitychangecanceled", true, context);
+                            DynamicImpulseHelper.Singleton.TriggerDynamicImpulseWithArgument<float3>(context.LocalUser.GetBodyNodeSlot(BodyNode.Root), "gravitychangecanceled", true, __instance.Gravity.Evaluate(context), context);
+                            __result = __instance.Character.Evaluate(context) != null;
+                            Msg("prevented gravity change");
+                            return false;
 
+                        }
+                    }
                 }
+                
                 return true;
             }
         }
