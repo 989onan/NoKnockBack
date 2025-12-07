@@ -43,19 +43,22 @@
       <HintPath>$(ResonitePath)rml_libs\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="FrooxEngine">
-      <HintPath>$(ResonitePath)Resonite_Data\Managed\FrooxEngine.dll</HintPath>
+      <HintPath>$(ResonitePath)FrooxEngine.dll</HintPath>
     </Reference>
     <Reference Include="ProtoFlux.Nodes.FrooxEngine">
-      <HintPath>$(ResonitePath)Resonite_Data\Managed\ProtoFlux.Nodes.FrooxEngine.dll</HintPath>
+      <HintPath>$(ResonitePath)ProtoFlux.Nodes.FrooxEngine.dll</HintPath>
     </Reference>
     <Reference Include="ProtoFlux.Core">
-      <HintPath>$(ResonitePath)Resonite_Data\Managed\ProtoFlux.Core.dll</HintPath>
+      <HintPath>$(ResonitePath)ProtoFlux.Core.dll</HintPath>
     </Reference>
     <Reference Include="Elements.Core">
-      <HintPath>$(ResonitePath)Resonite_Data\Managed\Elements.Core.dll</HintPath>
+      <HintPath>$(ResonitePath)Elements.Core.dll</HintPath>
     </Reference>
     <Reference Include="ResoniteModLoader">
       <HintPath>$(ResonitePath)Libraries\ResoniteModLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Renderite.Shared">
+      <HintPath>$(ResonitePath)Renderite.Shared.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

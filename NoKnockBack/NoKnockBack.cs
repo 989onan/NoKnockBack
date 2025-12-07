@@ -12,6 +12,7 @@ using ProtoFlux.Runtimes.Execution.Nodes.Actions;
 using static FrooxEngine.SessionControlDialog;
 using System.Runtime.Remoting.Contexts;
 using ProtoFlux.Core;
+using Renderite.Shared;
 
 namespace NoKnockBack
 {
@@ -28,7 +29,7 @@ namespace NoKnockBack
         public override string Author => "989onan";
         public override string Link => "https://github.com/989onan/NoKnockBack";
         public override string Name => "NoKnockBack";
-        public override string Version => "1.2.0";
+        public override string Version => "1.2.1";
 
         public override void OnEngineInit()
         {
